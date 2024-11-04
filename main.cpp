@@ -67,6 +67,10 @@ class Matrix {
         }
         // 6. Swap matrix rows
         void swapRows(int row1, int row2) {
+            if (row1 < 0 || row1 >= SIZE || row2 < 0 || row2 >= SIZE) {
+                cout << "Invalid rows for swap\n";
+                return;
+            }
             swap(data[row1], data[row2]);
             cout << "\n";
         }
